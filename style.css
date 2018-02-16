@@ -6,7 +6,9 @@
 .btnRight{
   float:right;
 }
-
-#q1, #q2, #q2a, #q2b, #q2c, #q3, #q4, #thanks {
-	display: none;
+.question{
+  display:none;
+}
+#welcome{
+  display:block;
 }
