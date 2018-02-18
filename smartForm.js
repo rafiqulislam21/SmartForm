@@ -18,10 +18,10 @@ var userData = {};
 
 if(localStorage.getItem('userData')){
   userData = JSON.parse(localStorage.getItem('userData'));
-  //to keep the same page on refresh
+  
   $(".question").hide();
   $("#"+userData.currentQuestion).show();
-  //with the last data
+  
 
 
   //q1
@@ -34,34 +34,34 @@ if(localStorage.getItem('userData')){
   //q2a
   var l = $("#q2a input[name='likesHTML']");
   for(var i=0; i<userData.html.likes.length; i++){
-    //console.log(userData.html.likes[i]);
+  
     $(l[userData.html.likes[i]]).prop('checked', true);
   }
   var dl = $("#q2a input[name='dlikesHTML']");
   for(var i=0; i<userData.html.dislikes.length; i++){
-    //console.log(userData.html.dislikes[i]);
+  
     $(dl[userData.html.dislikes[i]]).prop('checked', true);
   }
   //q2b
   l = $("#q2b input[name='likesCSS']");
   for(var i=0; i<userData.css.likes.length; i++){
-    //console.log(userData.html.likes[i]);
+  
     $(l[userData.css.likes[i]]).prop('checked', true);
   }
   dl = $("#q2b input[name='dlikesCSS']");
   for(var i=0; i<userData.css.dislikes.length; i++){
-    //console.log(userData.html.dislikes[i]);
-    $(dl[userData.css.dislikes[i]]).prop('checked', true);
+  
+     $(dl[userData.css.dislikes[i]]).prop('checked', true);
   }
   //q2c
   l = $("#q2c input[name='likesJS']");
   for(var i=0; i<userData.js.likes.length; i++){
-    //console.log(userData.html.likes[i]);
+  
     $(l[userData.js.likes[i]]).prop('checked', true);
   }
   dl = $("#q2c input[name='dlikesJS']");
   for(var i=0; i<userData.js.dislikes.length; i++){
-    //console.log(userData.html.dislikes[i]);
+  
     $(dl[userData.js.dislikes[i]]).prop('checked', true);
   }
   $("#htmlnxt, #cssnxt, #jsnxt").click(function(event){
@@ -208,7 +208,7 @@ $("#htmlnxt").click(function(event){
     else{
       $("#q2a").hide('slow');
       $("#q2").show('slow');
-      //$("#htmlQ").prop("disabled", true);
+     
     }
 });
 
